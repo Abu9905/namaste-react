@@ -2,19 +2,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const parent = React.createElement("div", {id : "parent"},
-    React.createElement("div", {id : "parent"},
-        [React.createElement("div", {}, "Child 1"), React.createElement("div", {}, "Child 2")],
-    )
+const elem = <h1>
+    <span>Abu Is King</span>
+    </h1>
+
+const  title = (
+    <h1 className='heading'> jsx heading</h1>
+);
+
+const number = 10000;
+// React function component:-
+const HeadingComponent = () => (
+    <div id ='container'>
+        {elem}
+        {title}
+        <h1 className='heading'>namaste React  heading</h1>
+    </div>
 )
 
 
-const heding = React.createElement(
-    "h1" ,
-    {id : "heading"}
-    , "Hello World!hjdfkjeuith "
-);
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(heding);
+root.render(<HeadingComponent />);
